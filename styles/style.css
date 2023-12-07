@@ -339,6 +339,10 @@
   box-shadow: 2px 1px 1px 1px var(--font-color);
 }
 
+.save-button:hover {
+  cursor: pointer;
+}
+
 .save-button:active {
   box-shadow: none;
 }
