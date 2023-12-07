@@ -212,6 +212,7 @@
   position: relative;
   z-index: 2;
   color: var(--font-color);
+  font-size: 14px;
 }
 
 .card__like-button::before {
@@ -230,11 +231,11 @@
 }
 
 .card__like-button:hover>.button__text {
-  animation: filler 1s 0s forwards;
+  animation: filler 1s 0s ease-in forwards;
 }
 
 .card__like-button:hover::before {
-  animation: filler 1s 0s forwards;
+  animation: filler 1s 0s ease-in-out forwards;
 }
 
 .countour {
@@ -284,9 +285,24 @@
 }
 
 .card__icon-button:active .core,
-.card__icon-button:active .main-body,
-.like-icon.is-liked .contour {
+.card__icon-button:active .main-body {
   fill: var(--heart-color);
+}
+
+.like-icon.is-liked .countour {
+  fill: var(--heart-color);
+}
+
+.like-icon.is-liked:hover .countour,
+.like-icon.is-liked:hover .core,
+.like-icon.is-liked:hover .main-body {
+  fill: var(--font-color);
+}
+
+.like-icon:active .core,
+.like-icon:active .main-body {
+  fill: var(--heart-color);
+  transition: fill 0.3s 0.1s;
 }
 
 .like-icon.is-liked {
@@ -317,6 +333,14 @@
     min-width: 335px;
     min-height: 45px;
   }
+}
+
+.save-button:focus-visible {
+  box-shadow: 2px 1px 1px 1px var(--font-color);
+}
+
+.save-button:active {
+  box-shadow: none;
 }
 
 .floppy-icon {

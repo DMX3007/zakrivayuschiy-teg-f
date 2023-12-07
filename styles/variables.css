@@ -4,4 +4,13 @@
   --main-font: 'Inter', sans-serif;
   --accent-font: 'Press Start 2P', sans-serif;
   --heart-color: #FF0000;
+  --theme-color: #d3d3d3;
+  --theme-gradient-start: #e7e7e7;
+  --theme-gradient-end: #1a1a1a;
+  --text-stroke: #fff;
+  --bg-color: #fff;
+  --countour-color: #000;
+  --font-color: #000;
+  --font-weight-header: 700;
+  --font-weight-paragraph: 400;
 }
