@@ -29,12 +29,14 @@
 
 @keyframes filler {
   from {
+    color: var(--font-color);
+    fill: var(--font-color);
     width: 0;
-    color: black;
   }
 
   to {
-    color: white;
+    color: var(--bg-color);
+    fill: var(--bg-color);
     width: 100%;
   }
 }
@@ -45,7 +47,7 @@
   }
 
   100% {
-    transform: scale(1.5);
+    transform: scale(1.15);
   }
 }
 
