@@ -13,4 +13,5 @@
   --font-color: #000;
   --font-weight-header: 700;
   --font-weight-paragraph: 400;
+  --hovered-color: var(--bg-color);
 }
