@@ -89,12 +89,12 @@
   left: 5px;
   width: 0;
   height: 2px;
-  background-color: var(--font-color);
 }
 
 .theme-menu__button:focus-visible::after {
   width: 90%;
   transition: width 0.3s ease;
+  background-color: var(--font-color);
 }
 
 .theme-menu__button:hover {
@@ -186,6 +186,10 @@
   background-color: transparent;
 }
 
+.card__icon-button:focus-visible>.like-icon {
+  outline: 2px solid var(--font-color);
+}
+
 .card__icon-button:focus-visible {
   outline: none;
 }
@@ -200,7 +204,7 @@
   z-index: 0;
   width: 130px;
   border: none;
-  padding: 8px;
+  padding: 10px;
   outline: 2px solid var(--font-color);
   font-family: var(--accent-font), sans-serif;
   text-transform: capitalize;
@@ -222,20 +226,33 @@
   left: 0;
   z-index: 1;
   width: 0px;
-  height: 33px;
+  height: 100%;
   background-color: var(--font-color);
 }
 
-.card__like-button:hover>.button__text {
-  animation: filler 0.5s 0s ease-in-out forwards;
+.card__like-button:hover .button__text {
+  mix-blend-mode: difference;
 }
 
 .card__like-button:hover::before {
   animation: filler 0.5s 0s ease-in-out forwards;
 }
 
-.card__like-button:focus-visible {
+.card__like-button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   box-shadow: 2px 1px 1px 1px var(--font-color);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card__like-button:focus-visible::after {
+  opacity: 1;
 }
 
 .countour {
@@ -264,6 +281,7 @@
 .like-icon:hover {
   cursor: pointer;
 }
+
 
 .heart:hover .countour {
   opacity: 1;
@@ -356,25 +374,40 @@
   top: 0;
   left: 0;
   z-index: 1;
-  width: 0px;
+  width: 0;
   height: 100%;
   background-color: var(--font-color);
 }
 
 .save-button:hover .save-button-text {
-  animation: filler 0.5s 0s ease-in-out forwards;
+  mix-blend-mode: difference;
+  /* color: var(--bg-color); */
 }
 
 .save-button:hover .floppy-icon {
-  animation: filler 0.1s 0.1s linear forwards;
+  mix-blend-mode: difference;
+  /* fill: var(--bg-color); */
 }
 
 .save-button:hover::before {
   animation: filler 0.5s 0s ease-in-out forwards;
 }
 
-.save-button:focus-visible {
+.save-button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
   box-shadow: 2px 1px 1px 1px var(--font-color);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.save-button:focus-visible::after {
+  opacity: 1;
 }
 
 .save-button:hover {
@@ -527,8 +560,8 @@
 }
 
 .dialog-button:hover .button__text {
-  animation: filler 0.5s 0s ease-in-out forwards;
   cursor: pointer;
+  mix-blend-mode: difference;
 }
 
 .dialog-button:hover::before {

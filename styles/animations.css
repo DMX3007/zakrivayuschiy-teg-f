@@ -29,14 +29,10 @@
 
 @keyframes filler {
   from {
-    color: var(--font-color);
-    fill: var(--font-color);
     width: 0;
   }
 
   to {
-    color: var(--bg-color);
-    fill: var(--bg-color);
     width: 100%;
   }
 }
