@@ -29,11 +29,11 @@
 
 @keyframes filler {
   from {
-    transform: translateX(-100%);
+    scale: 0;
   }
 
   to {
-    transform: translateX(0);
+    scale: 1;
   }
 }
 
